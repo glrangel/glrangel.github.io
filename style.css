@@ -11,7 +11,7 @@ body{
 		clear: both;
 }
 
-.header,.textBody,.navbar{
+.header,.navbar{
 	font-family: Inconsolata;
 	color: white;	
 	text-shadow: 0 0 2px #000;
@@ -23,10 +23,10 @@ body{
 	display: inline;
 
 }
-.header #title{ /*Gabriel Rangel*/
+#title{ /*Gabriel Rangel*/
 	padding-top: 250px;
 }
-.header #subtitle{
+#subtitle{
 	font-size: 40px;
 	font-style: italic;
 	padding-bottom: 400px; /*change*/
