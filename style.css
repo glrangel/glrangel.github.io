@@ -1,0 +1,71 @@
+html{
+	background: url("IslandOfTheDead.jpg") no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+  	-o-background-size: cover;
+	background-size: cover;
+}
+body{
+	margin: 0;
+}
+
+#wrapper{
+
+}
+.div1,.textBody,.navbar{
+	font-family: Inconsolata;
+	color: white;	
+	text-shadow: 0 0 2px #000;
+
+}
+
+.div1 { /*Gabriel Rangel*/
+	text-align: center;
+	font-size: 60px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.textBody{
+	background: rgba(255, 255, 255, 0.35);
+  	border-radius: 3px;
+  	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+	margin-bottom: 2px;
+	text-align: center;
+	font-weight: bold;
+}
+.navbar{
+	background: rgba(0, 0, 0, 0.35);
+  	box-shadow: 0 1px 5px rgba(0, 0, 0, 1);
+  	height: 50px;
+  	overflow: hidden;
+}
+
+.list{ /*navbar list*/
+	margin:0;
+	margin-right: 20px;
+	vertical-align: middle;
+	height: 50px;
+	display: table;
+	float: right;
+}
+.list li{ /*elements in nav bar*/
+    list-style-type: none;
+    vertical-align: middle;
+   	display: table-cell;
+   	padding-right: 20px;
+   	padding-left: 20px;
+   	font-size: 20px;
+}
+.list li:hover{ /*elements in nav bar*/
+  	box-shadow: 0 1px 10px rgba(0, 0, 0, 1);
+  	cursor: pointer;
+}
+/*.navbar ul li{
+		    border: 1px red solid;
+
+}*/
+/**{
+	    border: 3px red solid;
+
+}*/
