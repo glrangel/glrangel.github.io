@@ -15,8 +15,8 @@ html,body{
 	height: 100%;
 	position: relative;
 	overflow: scroll;
-		margin: 0;
-		clear: both;
+	margin: 0;
+	clear: both;
 }
 
 .header,.navbar{
@@ -41,7 +41,7 @@ html,body{
 
 }
 .navbar{
-	background: rgba(0, 0, 0, 0.35);
+	background: rgba(0, 0, 0, 0.5);
   	box-shadow: 0 1px 5px rgba(0, 0, 0, 1);
   	height: 50px;
   	overflow: hidden;
@@ -70,10 +70,58 @@ html,body{
   	cursor: pointer;
 }
 .body{
-	background: rgba(255, 255, 255, 1);
-	height: 400px;
+	background: rgba(255,255,255, 1);
+	height: 100%;
 	width: 100%;
+	padding-top: 20px;
+/*	text-shadow: 0 0 2px #fff;
+*/}
+
+
+.body p {
+	font-family: Inconsolata;
+	font-weight: bold;
+	font-size: 50px;
+	color: black;
+	padding-top: 10px;
+	padding-left: 20px;
+/*	border: 1px red solid;
+*/}
+
+.projTable{
+	display: flex;
+	margin: auto;
+	width: 100%;
+/*	border: 4px yellow solid;
+*/
 }
+.projElem{
+	font-family: Inconsolata;
+	/*font-weight: bold;*/
+	font-size: 30px;
+	color: black;
+	margin: auto;
+	text-align: center;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 10px;
+	background: rgba(0, 0, 0, 0.1);
+	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.7);
+	border-radius: 2px;
+	height: 400px;
+	text-wrap: normal;
+	word-wrap:break-word;
+	/*display: fixed;*/
+
+}
+#projElemSubtitle{
+	font-size: 20px;
+	text-align: center;
+	font-weight: normal;
+
+
+}
+
 
 
 /*.navbar ul li{
