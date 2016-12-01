@@ -1,43 +1,40 @@
 html,body{
+	height: 100%;
+	margin: 0;
 	background: url("IslandOfTheDead.jpg") no-repeat center center fixed;
-
-	/*Phone Format*/
-    -webkit-background-size: 100%; 
-    -moz-background-size: 100%; 
-    -o-background-size: 100%; 
-    background-size: 100%;
 
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
   	-o-background-size: cover;
 	background-size: cover;
-
-	height: 100%;
-	position: relative;
-	overflow: scroll;
-	margin: 0;
-	clear: both;
 }
+
 
 .header,.navbar{
 	font-family: Inconsolata;
 	color: white;	
 	text-shadow: 0 0 2px #000;
-
+/*	z-index: 2;
+*/
 }
 .header { /*Gabriel Rangel*/
 	text-align: center;
 	font-size: 60px;
-	display: inline;
-
+	/*display: inline;*/
+	height: 100%;
+	width: 100%;
 }
 #title{ /*Gabriel Rangel*/
 	padding-top: 250px;
+/*	border:2px yellow solid;
+*/
 }
 #subtitle{
 	font-size: 40px;
 	font-style: italic;
-	padding-bottom: 400px; /*change*/
+	height: 100%;
+/*	border:2px black solid;
+*/
 
 }
 .navbar{
@@ -61,32 +58,90 @@ html,body{
     list-style-type: none;
     vertical-align: middle;
    	display: table-cell;
-   	padding-right: 20px;
-   	padding-left: 20px;
    	font-size: 20px;
+}
+.list li a{ /*elements in nav bar*/
+    padding-right: 20px;
+   	padding-left: 20px;
+   	padding-top: 13px;
+   	padding-bottom: 13px;
+
+
+}
+/*remove link colors*/
+.list a 
+{
+	text-decoration: none;
+	    color: #fff;
+
+}
+
+.list li li{
+	font-size: 40px;
 }
 .list li:hover{ /*elements in nav bar*/
   	box-shadow: 0 1px 10px rgba(0, 0, 0, 1);
   	cursor: pointer;
 }
-.body{
+
+
+
+
+/*----------------------- ABOUT ME SECTION -----------------------*/
+
+
+.aboutSection div{
+	font-family: Courier;
+		/*font-weight: bold;*/
+	font-size: 20px;
+	color: black;
+	padding-top: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 15px;
+	text-align: left;
+	text-indent: 50px;
+}
+
+#about,#projects,#contact{
+	background: rgba(188,179,161,0.57);
+	box-shadow: 0px 1px 5px rgba(0, 0, 0, 1);
+	padding-bottom: 40px;
+
+
+}
+#aboutMeLinks{
+	display: flex;
+	border: 4px black solid;
+}
+#aboutMeLinks div{
+	float:left;
+}
+
+
+
+
+
+/*----------------------- PROJECT SECTION -----------------------*/
+
+
+
+.projectSection,.aboutSection,.contactSection{
 	background: rgba(255,255,255, 1);
+	/*box-shadow: 0 1px 5px rgba(0, 0, 0, 0.7);*/
 	height: 100%;
 	width: 100%;
-	padding-top: 20px;
-/*	text-shadow: 0 0 2px #fff;
-*/}
-
-
-.body p {
-	font-family: Inconsolata;
-	font-weight: bold;
+	padding-top: 10px;
+}
+.projectSection p,.aboutSection p,.contactSection p {
+	font-family: Courier;
+	/*font-weight: bold;*/
 	font-size: 50px;
 	color: black;
 	padding-top: 10px;
 	padding-left: 20px;
-/*	border: 1px red solid;
-*/}
+	padding-right: 20px;
+}
 
 .projTable{
 	display: flex;
@@ -96,18 +151,18 @@ html,body{
 */
 }
 .projElem{
-	font-family: Inconsolata;
+	font-family: Courier;
 	/*font-weight: bold;*/
-	font-size: 30px;
+	font-size: 18px;
 	color: black;
 	margin: auto;
 	text-align: center;
-	padding-left: 20px;
-	padding-right: 20px;
-	padding-top: 10px;
+	padding-left: 2px;
+	padding-right: 2px;
+	padding-top: 15px;
 	background: rgba(0, 0, 0, 0.1);
-	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.7);
-	border-radius: 2px;
+	box-shadow: 0 1px 7px rgba(0, 0, 0, 0.7);
+	/*border-radius: 2px;*/
 	height: 400px;
 	text-wrap: normal;
 	word-wrap:break-word;
@@ -115,11 +170,12 @@ html,body{
 
 }
 #projElemSubtitle{
-	font-size: 20px;
+	font-size: 14px;
 	text-align: center;
 	font-weight: normal;
-
-
+}
+#soundcloud{
+	width: 500px;
 }
 
 
