@@ -9,7 +9,6 @@ html,body{
 	background-size: cover;
 }
 
-
 .header,.navbar{
 	font-family: Inconsolata;
 	color: white;	
@@ -90,9 +89,8 @@ html,body{
 /*----------------------- ABOUT ME SECTION -----------------------*/
 
 
-.aboutSection div{
+.aboutSection #text{
 	font-family: Courier;
-		/*font-weight: bold;*/
 	font-size: 20px;
 	color: black;
 	padding-top: 10px;
@@ -102,21 +100,49 @@ html,body{
 	text-align: left;
 	text-indent: 50px;
 }
-
-#about,#projects,#contact{
+#about,#projects,#contact{ /*site titles*/
 	background: rgba(188,179,161,0.57);
 	box-shadow: 0px 1px 5px rgba(0, 0, 0, 1);
 	padding-bottom: 40px;
+}
+#aboutMeLinks{ /* link div container*/
+	text-align: center;
+    margin: 0px auto;
+    bottom: 0;
+    margin-top: 40px;
+    display: table;
+    width: 70%;
+    /*border: 4px solid black;*/
+}
+#aboutMeLinks div{ /*individual link divs*/
+	display: table-cell;
+	text-align:center;
+	vertical-align: middle;
+	/*border: 4px solid black;*/
+	width:50%;
 
+}
+#aboutMeLinks img, #soundcloud iframe{ /*link elements*/
+	display: block;
+	margin: auto;
+	height: 120px;
 
 }
-#aboutMeLinks{
-	display: flex;
-	border: 4px black solid;
+
+#aboutMeLinks p{ /*link titles*/
+	padding-bottom: 20px;
+	font-family: Courier;
+	font-style: italic;
+	font-size: 15px;
+	color: black;
+	text-align: center;
 }
-#aboutMeLinks div{
-	float:left;
+#aboutMeLinks img:hover{
+	box-shadow: 0px 1px 5px rgba(0, 0, 255, 1);
+	border-radius: 65px;
+
 }
+
 
 
 
@@ -144,38 +170,49 @@ html,body{
 }
 
 .projTable{
-	display: flex;
-	margin: auto;
+	display: inline-block;
+	/*margin-left: 3%;*/
 	width: 100%;
-/*	border: 4px yellow solid;
-*/
+	/*border: 4px black solid;*/
+	text-align: center;
+
 }
 .projElem{
+		/*border: 4px black solid;*/
+
 	font-family: Courier;
-	/*font-weight: bold;*/
 	font-size: 18px;
 	color: black;
-	margin: auto;
-	text-align: center;
+	margin: 10px;
+	/*text-align: center;*/
+
 	padding-left: 2px;
 	padding-right: 2px;
 	padding-top: 15px;
+
 	background: rgba(0, 0, 0, 0.1);
 	box-shadow: 0 1px 7px rgba(0, 0, 0, 0.7);
-	/*border-radius: 2px;*/
-	height: 400px;
-	text-wrap: normal;
-	word-wrap:break-word;
-	/*display: fixed;*/
+	height: 150px;
+	float: left;	
+	transition: 1s ease;
+	
+
+
+
+
+}
+.projElem:hover{
+	box-shadow: 0 1px 7px rgba(0, 0, 255, 1);
+	-webkit-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	transform: scale(1.1);
+	transition: 1s ease;
 
 }
 #projElemSubtitle{
 	font-size: 14px;
 	text-align: center;
 	font-weight: normal;
-}
-#soundcloud{
-	width: 500px;
 }
 
 
