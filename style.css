@@ -170,21 +170,20 @@ html,body{
 }
 
 .projTable{
-	display: inline-block;
-	/*margin-left: 3%;*/
 	width: 100%;
-	/*border: 4px black solid;*/
 	text-align: center;
 
 }
 .projElem{
-		/*border: 4px black solid;*/
+	/* Keep blocks centered */
+ 	display: -moz-inline-stack;
+    display: inline-block;
+    vertical-align: top;
 
 	font-family: Courier;
 	font-size: 18px;
 	color: black;
 	margin: 10px;
-	/*text-align: center;*/
 
 	padding-left: 2px;
 	padding-right: 2px;
@@ -193,13 +192,8 @@ html,body{
 	background: rgba(0, 0, 0, 0.1);
 	box-shadow: 0 1px 7px rgba(0, 0, 0, 0.7);
 	height: 150px;
-	float: left;	
+	width: 17%;
 	transition: 1s ease;
-	
-
-
-
-
 }
 .projElem:hover{
 	box-shadow: 0 1px 7px rgba(0, 0, 255, 1);
@@ -214,6 +208,21 @@ html,body{
 	text-align: center;
 	font-weight: normal;
 }
+/*----------------------- CONTACT SECTION -----------------------*/
+#contact{
+	/*font-size: 40px;*/
+
+}
+.contactSection div p{
+	font-size: 30px;
+	text-align: center;
+}
+.contactSection{
+	height: 60%;
+
+
+}
+
 
 
 
