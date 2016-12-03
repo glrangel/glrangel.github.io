@@ -1,7 +1,7 @@
 html,body{
 	height: 100%;
 	margin: 0;
-	background: url("IslandOfTheDead.jpg") no-repeat center center fixed;
+	background: url("IslandOfTheDead-compressor.jpg") no-repeat center center fixed;
 
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -32,13 +32,18 @@ html,body{
 	font-size: 40px;
 	font-style: italic;
 	height: 100%;
+	/*display: inline-block;*/
 /*	border:2px black solid;
 */
 
 }
+#subtitle img{
+	width: 100px;
+	height: 100px;
+}
 .navbar{
 	background: rgba(0, 0, 0, 0.5);
-  	box-shadow: 0 1px 5px rgba(0, 0, 0, 1);
+  	box-shadow: 0 3px 10px rgba(0, 0, 0, 1);
   	height: 50px;
   	overflow: hidden;
   	position: fixed;
@@ -67,12 +72,12 @@ html,body{
 
 
 }
+
 /*remove link colors*/
 .list a 
 {
 	text-decoration: none;
-	    color: #fff;
-
+	color: #fff;
 }
 
 .list li li{
@@ -82,8 +87,40 @@ html,body{
   	box-shadow: 0 1px 10px rgba(0, 0, 0, 1);
   	cursor: pointer;
 }
+/*----------------------- BODY -----------------------*/
+/* title containers*/
+#about,#projects/*,#contact*/{ 
+	background: rgba(188,179,161,0.57);
+	box-shadow: 0px 2px 10px rgba(0, 0, 0, 1);
+	padding: 10px;
+	padding-bottom: 30px;
+}
 
+/*section containers*/
+.projectSection,.aboutSection/*,.contactSection*/{ 
+	/*position: relative;*/
+	background: rgba(255,255,255, 1);
+	box-shadow: 0px 1px 5px rgba(255, 255, 255, 1);
 
+	/*box-shadow: 0 1px 5px rgba(0, 0, 0, 0.7);*/
+	height: 100%;
+	width: 100%;
+	z-index: -1;
+	/*position: absolute;*/
+	/*border: 1px solid blue;*/
+	display: inline-block;
+}
+/*titles*/
+.projectSection p,.aboutSection p/*,.contactSection p */{
+	font-family: Courier;
+	/*font-variant:;*/
+	/*font-weight: bold;*/
+	font-size: 40px;
+	color: black;
+	/*padding-top: 10px;*/
+	padding-left: 20px;
+	padding-right: 20px;
+}
 
 
 /*----------------------- ABOUT ME SECTION -----------------------*/
@@ -100,11 +137,7 @@ html,body{
 	text-align: left;
 	text-indent: 50px;
 }
-#about,#projects,#contact{ /*site titles*/
-	background: rgba(188,179,161,0.57);
-	box-shadow: 0px 1px 5px rgba(0, 0, 0, 1);
-	padding-bottom: 40px;
-}
+
 #aboutMeLinks{ /* link div container*/
 	text-align: center;
     margin: 0px auto;
@@ -145,40 +178,19 @@ html,body{
 
 
 
-
-
-
 /*----------------------- PROJECT SECTION -----------------------*/
 
-
-
-.projectSection,.aboutSection,.contactSection{
-	background: rgba(255,255,255, 1);
-	/*box-shadow: 0 1px 5px rgba(0, 0, 0, 0.7);*/
-	height: 100%;
-	width: 100%;
-	padding-top: 10px;
-}
-.projectSection p,.aboutSection p,.contactSection p {
-	font-family: Courier;
-	/*font-weight: bold;*/
-	font-size: 50px;
-	color: black;
-	padding-top: 10px;
-	padding-left: 20px;
-	padding-right: 20px;
-}
 
 .projTable{
 	width: 100%;
 	text-align: center;
-
 }
 .projElem{
 	/* Keep blocks centered */
  	display: -moz-inline-stack;
     display: inline-block;
     vertical-align: top;
+    /* end */
 
 	font-family: Courier;
 	font-size: 18px;
@@ -191,39 +203,94 @@ html,body{
 
 	background: rgba(0, 0, 0, 0.1);
 	box-shadow: 0 1px 7px rgba(0, 0, 0, 0.7);
-	height: 150px;
+	height: 200px;
 	width: 17%;
 	transition: 1s ease;
+
+	/*outline: none;*/
+
+
+
+}
+#bus{
+	background:     linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ), url("bus.jpg");
+	background-position: center;
+	background-size: 100% 100%;
+	color: white;
+
+
+}
+#bus p{
+		color: white;
+
 }
 .projElem:hover{
-	box-shadow: 0 1px 7px rgba(0, 0, 255, 1);
+	box-shadow: 0 1px 7px rgba(0, 0, 255, 0.7);
 	-webkit-transform: scale(1.1);
 	-ms-transform: scale(1.1);
 	transform: scale(1.1);
 	transition: 1s ease;
 
+
 }
 #projElemSubtitle{
+	/*font-family: Courier;*/
 	font-size: 14px;
 	text-align: center;
 	font-weight: normal;
+	color:  rgba(0, 0, 0, 0.6);
+	/*text-indent: 10px;*/
 }
+
 /*----------------------- CONTACT SECTION -----------------------*/
 #contact{
 	/*font-size: 40px;*/
+}
 
-}
-.contactSection div p{
-	font-size: 30px;
-	text-align: center;
-}
 .contactSection{
-	height: 60%;
+	height: 20%;
+	/*padding-top: 10px;*/
+	background: rgba(0,0,0,1);
+	box-shadow: 0 1px 7px rgba(255, 255, 255, 0.7);
+	font-size: 20px;
+	font-family: Inconsolata;
+	color: white;
+	text-align: left;
+	/*padding-left: 20px;*/
+	/*border: 1px white solid;*/
+	/*vertical-align: middle;*/
+	display: flex;
+	align-items: center;
+
+	/*display: table-cell;*/
+
+		/*line-height: 10px;*/
 
 
 }
 
+.contactSection div p{
+	color: rgba(255,255,255,0.5);
+	/*padding-left: 10px;*/
 
+	margin: 0;
+	/*display: inline-block;*/
+	/*vertical-align: middle;*/
+}
+
+.contactSection div{ 
+	/*border: 1px white solid;*/
+	margin: 10px;
+}
+.contactSection div p:first-of-type{
+	color: rgba(255,255,255,0.3);
+	margin: 0;
+	/*display: inline-block;*/
+	/*vertical-align: middle;*/
+}
 
 
 /*.navbar ul li{
