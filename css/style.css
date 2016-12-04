@@ -236,6 +236,7 @@ html,body{
 }
 /* element container */
 .projElem{ 
+	/*font-weight: thick;*/
 
 	/* Keep blocks centered */
  	display: -moz-inline-stack;
@@ -246,16 +247,17 @@ html,body{
     /* end */
 
 	font-family: Courier;
-	font-size: 18px;
+	font-size: 20px;
 	color: black;
 	margin: 10px;
 
 	padding-left: 2px;
 	padding-right: 2px;
-	padding-top: 15px;
+	padding-top: 20px;
+
 
 	background:
-	rgba(0, 0, 0, 0.7);
+	rgb(68, 67, 76);
 
 	box-shadow: 0 1px 7px rgba(0, 0, 0, 0.7);
 	height: 180px;
