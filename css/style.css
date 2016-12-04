@@ -135,11 +135,7 @@ html,body{
 /*titles*/
 .projectSection p,.aboutSection p{
 	font-family: Courier;
-	/*font-variant:;*/
-	/*font-weight: bold;*/
-	font-size: 40px;
 	color: white;
-	/*padding-top: 10px;*/
 	padding-left: 20px;
 	padding-right: 20px;
 }
@@ -238,11 +234,15 @@ html,body{
 	width: 100%;
 	text-align: center;
 }
-.projElem{
+/* element container */
+.projElem{ 
+
 	/* Keep blocks centered */
  	display: -moz-inline-stack;
     display: inline-block;
     vertical-align: top;
+    position: relative;
+
     /* end */
 
 	font-family: Courier;
@@ -255,17 +255,27 @@ html,body{
 	padding-top: 15px;
 
 	background:
-	rgba(0, 0, 0, 0.1);
+	rgba(0, 0, 0, 0.7);
 
 	box-shadow: 0 1px 7px rgba(0, 0, 0, 0.7);
 	height: 180px;
 	width: 17%;
 	transition: 1s ease;
 
+	background-position: center;
+	background-size: 100% 100%;
+	color: white;
+
 	/*outline: none;*/
 
-
-
+}
+.dependencies{
+	position: absolute;
+	font-size: 10px;
+	color:  rgba(200, 0, 0, 1);
+	bottom: 0;
+	right: 0;
+	left:0;
 }
 #bus{
 	background:     linear-gradient(
@@ -294,7 +304,12 @@ html,body{
 	font-size: 14px;
 	text-align: center;
 	font-weight: normal;
-	color:  rgba(0, 0, 0, 0.6);
+	vertical-align: middle;
+	color: rgba(255,255,255,0.8);
+	padding-top: 10%;
+		/*position: absolute;*/
+
+	/*padding-top: 10px;*/
 	/*text-indent: 10px;*/
 }
 
