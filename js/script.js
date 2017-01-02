@@ -9,17 +9,13 @@ $(document).ready(function(){
 	    if( target.length ) {
 	        event.preventDefault();
 	        $('html, body').stop().animate({
-	            scrollTop: target.offset().top -50
+	            scrollTop: target.offset().top - 50
 	        }, 1000);
 	    }
 	});
 
 
-
 });
-// $(window).onload = function()
-// {
-// }
 function fade(){
 	console.log("woop");
 			$("#lol").fadeOut(1000);
@@ -31,3 +27,4 @@ function fade(){
 
 	console.log($("#title").hasClass("load"));
 }
+

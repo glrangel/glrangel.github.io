@@ -2,18 +2,21 @@ html,body{
 	height: 100%;
 	margin: 0;
 
-	background: linear-gradient(
+
+}
+body{
+			background: linear-gradient(
       rgba(0, 0, 0, 0.4),
       rgba(0, 0, 0, 0.4)
-    ),url("../images/mountain.jpg") no-repeat center center fixed;
+    ),url("../images/mountain.jpg") no-repeat ; 
+	background-attachment:fixed;
 
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
   	-o-background-size: cover;
 	background-size: cover;
-
-
 }
+
 #lol{
 	position: absolute;
 	height: 100%;
@@ -114,7 +117,8 @@ html,body{
 	font-size: 40px;
 }
 .list li:hover{ /*elements in nav bar*/
-  	box-shadow: 0 1px 10px rgba(0, 0, 0, 1);
+  	border-bottom: 2px solid white;
+  	padding-top: 2px;
   	cursor: pointer;
 }
 /*----------------------- BODY -----------------------*/
@@ -131,6 +135,9 @@ html,body{
 	/*border: 1px solid blue;*/
 	display: inline-block;
 	/*padding-top: 80px;*/
+
+
+
 }
 /*titles*/
 .projectSection p,.aboutSection p{
@@ -138,6 +145,10 @@ html,body{
 	color: white;
 	padding-left: 20px;
 	padding-right: 20px;
+
+}
+.projectSection a{
+	text-decoration: none;
 }
 
 
@@ -228,6 +239,9 @@ html,body{
 	color:rgba(0,0,0, 0.5);
     text-shadow: 1px 4px 6px #fff, 0 0 0 #000, 1px 4px 6px #fff;
 
+	/*top right bottom left*/
+	margin: 50px 0 10px 0;
+
 }
 
 .projTable{
@@ -260,7 +274,7 @@ html,body{
 	rgb(68, 67, 76);
 
 	box-shadow: 0 1px 7px rgba(0, 0, 0, 0.7);
-	height: 180px;
+	height: 200px;
 	width: 17%;
 	transition: 1s ease;
 
@@ -271,6 +285,16 @@ html,body{
 	/*outline: none;*/
 
 }
+
+
+.item img{
+	overflow: hidden;
+	width: 50%;
+	/*margin-bottom: -350px;*/
+	margin: auto;
+	top:0;
+}
+
 .dependencies{
 	position: absolute;
 	font-size: 10px;
@@ -292,8 +316,19 @@ html,body{
 	color: rgba(255,255,255,0.8);
 
 }
+#mtg{
+	background:     linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ), url("../images/mtg.jpg");
+    background-size: 100px;
+	background-position: center;
+	/*background-size: 100% 10%;*/
+	color: white;
+
+}
 .projElem:hover{
-	box-shadow: 0 1px 7px rgba(0, 0, 255, 0.7);
+	box-shadow: 0 1px 7px rgba(0, 0, 0, 1);
 	-webkit-transform: scale(1.1);
 	-ms-transform: scale(1.1);
 	transform: scale(1.1);
