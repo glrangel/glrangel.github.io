@@ -5,19 +5,19 @@ html,body{
 
 }
 body{
-			background: linear-gradient(
+	background: linear-gradient(
       rgba(0, 0, 0, 0.4),
       rgba(0, 0, 0, 0.4)
     ),url("../images/mountain.jpg") no-repeat ; 
 	background-attachment:fixed;
-
+	overflow: hidden;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
   	-o-background-size: cover;
 	background-size: cover;
 }
 
-#lol{
+#loading{
 	position: absolute;
 	height: 100%;
 	width: 100%;
@@ -27,7 +27,7 @@ body{
 	padding-top: 100px;
 
 }
-#lol p{
+#loading p{
 	display: table-cell;
 	vertical-align: middle;
 	font-style: italic;
@@ -56,6 +56,16 @@ body{
 	font-size: 60px;
 	height: 100%;
 	width: 100%;
+}
+#top{ /*send viewport back to top*/
+	text-decoration: none;
+	/*color: white;*/
+	/*float: left;*/
+	background: url("../images/uparrow.png");
+		background-position: center;
+	background-size: 100% 100%;
+	width: 30px;
+	height: 30px;
 }
 #title{ /*Gabriel Rangel*/
 	padding-top: 250px;
@@ -159,7 +169,7 @@ body{
     rgba(0,0, 0, 0) 2%,
     rgba(0, 0, 0, 0) 98%,
     rgba(0,0, 0, 1) 100%
-    ),rgb(68, 67, 76);
+    ),rgba(68, 67, 76,1);
     box-shadow: 1px 1px 5px;
 
     height: 550px;
@@ -270,12 +280,11 @@ body{
 	padding-top: 20px;
 
 
-	background:
-	rgb(68, 67, 76);
+	background: rgb(68, 67, 76);
 
 	box-shadow: 0 1px 7px rgba(0, 0, 0, 0.7);
 	height: 200px;
-	width: 17%;
+	width: 25%;
 	transition: 1s ease;
 
 	background-position: center;

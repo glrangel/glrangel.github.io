@@ -18,11 +18,11 @@ $(document).ready(function(){
 });
 function fade(){
 	console.log("woop");
-			$("#lol").fadeOut(1000);
-
+	$("#loading").fadeOut(1000);
 	$("#title").addClass("load");
 	$("#subtitle").addClass("load");
 	$(".navbar").addClass("load");
+	$('body').css('overflow','scroll');
 
 
 	console.log($("#title").hasClass("load"));
