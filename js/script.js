@@ -15,7 +15,20 @@ $(document).ready(function(){
 	});
 
 
+    $(window).scroll( function(){
+           $('.hide').each( function(i){
+            var objectBottom = $(this).offset().top + $(this).outerHeight() / 2;
+            var windowBottom = $(window).scrollTop() + $(window).height();
+            /* Object must be completely visible */
+            if( windowBottom > objectBottom ){
+                $(this).animate({'opacity':'1'},1500);
+            } 
+        }); 
+    });
+
+
 });
+
 function fade(){
 	console.log("woop");
 	$("#loading").fadeOut(1000);
