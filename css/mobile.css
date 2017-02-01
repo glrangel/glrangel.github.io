@@ -1,0 +1,403 @@
+html,body{
+	height: 100%;
+	margin: 0;
+
+
+}
+body{
+	background: linear-gradient(
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.4)
+    ),url("../images/mountain.jpg") no-repeat ; 
+	background-attachment:fixed;
+	overflow: hidden;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+  	-o-background-size: cover;
+	background-size: cover;
+    overflow: scroll;
+}
+
+#loading{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	font-size: 20px;
+	text-align: center;
+	display: table;
+	padding-top: 100px;
+
+}
+#loading p{
+	display: table-cell;
+	vertical-align: middle;
+	font-style: italic;
+	color: white;
+}
+/*fade in after body is fully loaded*/
+
+.header,.navbar{
+	font-family:Inconsolata ; /*Inconsolata,Helvetica Neue,Verlag-Book*/
+	color: white;	
+	letter-spacing: 4px;
+
+	z-index: 2;
+
+}
+.header { /*title container */
+	text-align: center;
+	font-size: 60px;
+	height: 100%;
+	width: 100%;
+}
+#top{ /*send viewport back to top*/
+	text-decoration: none;
+	/*color: white;*/
+	/*float: left;*/
+	background: url("../images/uparrow.png");
+		background-position: center;
+	background-size: 100% 100%;
+	width: 30px;
+	height: 30px;
+}
+#title{ /*Gabriel Rangel*/
+/*    top:0;*/
+/*    left: 0;*/
+/*    margin: 0 auto;*/
+    font-size: 150px;
+    padding-top: 40vh;
+/*    text-align: left;*/
+}
+#subtitle{
+	font-size: 40px;
+	font-style: italic;
+	height: 100%;
+    padding-top: 80px;
+/*    text-align: right;*/
+}
+#title.load, #subtitle.load, .navbar.load{
+	opacity: 1;
+}
+
+
+#subtitle img{
+	width: 100px;
+	height: 100px;
+}
+.navbar{
+	background: rgba(0, 0, 0, 0.5);
+  	box-shadow: 0 3px 10px rgba(0, 0, 0, 1);
+  	height: 100px;
+  	overflow: hidden;
+  	position: fixed;
+  	width: 100%;
+}
+
+.list{ /*navbar list*/
+	margin:0;
+	margin-right: 20px;
+	vertical-align: middle;
+	height: 100px;
+	display: table;
+	float: right;
+}
+.list li{ /*elements in nav bar*/
+    list-style-type: none;
+    vertical-align: middle;
+   	display: table-cell;
+   	font-size: 30px;
+}
+.list li a{ /*elements in nav bar*/
+    padding-right: 20px;
+   	padding-left: 20px;
+   	padding-top: 13px;
+   	padding-bottom: 13px;
+
+
+}
+
+/*remove link colors*/
+.list a 
+{
+	text-decoration: none;
+	color: #fff;
+}
+
+.list li li{
+	font-size: 40px;
+}
+.list li:hover{ /*elements in nav bar*/
+  	border-bottom: 2px solid white;
+  	padding-top: 2px;
+  	cursor: pointer;
+}
+/*----------------------- BODY -----------------------*/
+/*section containers*/
+.projectSection,.aboutSection/*,.contactSection*/{ 
+	/*position: relative;*/
+	background:  rgba(255,255,255, 1);
+	width: 100%;
+	z-index: -1;
+	display: inline-block;
+    height: 105%;
+}
+/*titles*/
+.projectSection p,.aboutSection p{
+    font-family: Avenir;
+    color: rgba(255,255,255,0.8);
+    padding-left: 20px;
+	padding-right: 20px;
+    text-align: center;
+
+}
+.projectSection a{
+	text-decoration: none;
+}
+
+
+/*----------------------- ABOUT ME SECTION -----------------------*/
+.aboutSection{
+	background: linear-gradient(to bottom,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0,0, 0, 0) 2%,
+    rgba(0, 0, 0, 0) 98%,
+    rgba(0,0, 0, 1) 100%
+    ),rgba(68, 67, 76,1);
+    box-shadow: 1px 1px 5px;
+/*    padding-top: 35vh;*/
+
+}
+
+.aboutSection #text{
+	font-family: Avenir;
+	font-size: 50px;
+	color: rgba(255,255,255,0.5);
+	/*padding-top: 10px;*/
+	padding-left: 20px;
+	padding-right: 20px;
+	/*padding-bottom: 15px;*/
+	text-align: center;
+	text-indent: 50px;
+
+		/*color:rgba(0,0,0, 0.1);*/
+    /*text-shadow: 1px 4px 6px rgb(68, 67, 76), 0 0 0 #000, 1px 4px 6px rgb(68, 67, 76);*/
+		/*text-shadow: 1px 1px black;*/
+
+}
+
+#aboutMeLinks{ /* link div container*/
+	text-align: center;
+    margin: 0px auto;
+    bottom: 0;
+    margin-top: 80px;
+    display: table;
+    width: 70%;
+    /*border: 4px solid black;*/
+}
+#aboutMeLinks div{ /*individual link divs*/
+	display: table-cell;
+	text-align:center;
+	vertical-align: middle;
+	width:50%;
+
+}
+#aboutMeLinks img, #soundcloud iframe{ /*link elements*/
+	display: block;
+	margin: auto;
+	height: 220px;
+
+}
+
+#aboutMeLinks p{ /*link titles*/
+	padding-bottom: 20px;
+    font-family: Avenir;
+	font-style: italic;
+	font-size: 15px;
+	color: rgba(255,255,255,0.5);
+	text-align: center;
+}
+#aboutMeLinks img:hover{
+	box-shadow: 0px 1px 5px rgba(255, 255, 255, 1);
+	border-radius: 65px;
+
+}
+#about{
+	font-size: 80px;
+    padding-top: 40px;
+	/*color:rgba(255,255,255, 0.5);*/
+    /*text-shadow: 1px 4px 6px rgb(68, 67, 76), 0 0 0 #000, 1px 4px 6px rgb(68, 67, 76);*/
+}
+
+
+
+/*----------------------- PROJECT SECTION -----------------------*/
+.projectSection{
+/*	box-shadow: 0px 1px 5px rgba(255, 255, 255, 1);*/
+	height: 100%;
+
+}
+#projects{
+	/*color: black;*/
+	/*box-shadow: 0px 1px 5px rgba(255, 255, 255, 1);*/
+	font-size: 100px;
+	color:rgba(0,0,0, 0.5);
+/*    text-shadow: 1px 4px 6px #fff, 0 0 0 #000, 1px 4px 6px #fff;*/
+    padding-top: 40px;
+
+	/*top right bottom left*/
+	margin: 50px 0 10px 0;
+
+}
+
+.projTable{
+	width: 100%;
+	text-align: center;
+    padding-top: 30px;
+/*    padding-left: 200px;*/
+}
+/* element container */
+.projElem{ 
+	/*font-weight: thick;*/
+
+	/* Keep blocks centered */
+ 	display: -moz-inline-stack;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+
+    /* end */
+
+	font-family: Avenir;
+	font-size: 40px;
+	color: black;
+	margin: 10px;
+
+/*	padding-left: 2px;*/
+/*	padding-right: 2px;*/
+/*	padding-top: 20px;*/
+
+
+	background: rgb(68, 67, 76);
+
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.7);
+	height:400px;
+	width: 400px;
+	transition: 1s ease;
+
+	background-position: center;
+	background-size: 100% 100%;
+	color: white;
+
+	border-radius: 2%;
+	/*outline: none;*/
+
+}
+
+.item img{
+	overflow: hidden;
+	width: 50%;
+	/*margin-bottom: -350px;*/
+	margin: auto;
+	top:0;
+}
+
+.dependencies{
+/*	position: absolute;*/
+	font-size: 10px;
+	color:  rgba(200, 0, 0, 1);
+
+}
+#bus{
+	background:     linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ), url("../images/bus.jpg");
+	background-position: center;
+	background-size: 100% 100%;
+	color: white;
+}
+#bus p{
+	color: rgba(255,255,255,0.8);
+
+}
+#mtg{
+	background:     linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ), url("../images/mtg.jpg");
+    background-size: 100px;
+	background-position: center;
+	/*background-size: 100% 10%;*/
+	color: white;
+
+}
+.projElem:hover{
+/*	box-shadow: 0 1px 7px rgba(0, 0, 0, 1);*/
+	-webkit-transform: scale(1.03);
+	-ms-transform: scale(1.03);
+	transform: scale(1.03);
+	transition: 1s ease;
+
+
+}
+#projElemSubtitle{
+	/*font-family: Courier;*/
+	font-size: 20px;
+	text-align: center;
+	font-weight: normal;
+	vertical-align: middle;
+	color: rgba(255,255,255,0.8);
+/*	padding-top: 15%;*/
+		/*position: absolute;*/
+
+	/*padding-top: 10px;*/
+	/*text-indent: 10px;*/
+}
+
+/*----------------------- CONTACT SECTION -----------------------*/
+#contact{
+	/*font-size: 40px;*/
+}
+#bitcoin{
+	border: 1px black solid;
+	display: inline-block;
+	height: 100%;
+	width: 100%;
+	text-align: right;
+	vertical-align: middle;
+}
+.contactSection{
+/* 	border: 2px orange solid; */
+
+	height: 10vh;
+	text-align: left;
+	display: flex;
+	align-items: center;
+
+
+	background: linear-gradient(to bottom,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0,0, 0, 0) 10%
+    ),rgb(68, 67, 76);
+
+	font-size: 40px;
+	font-family: Inconsolata;
+	color: white;
+
+
+}
+
+.contactSection div p{
+	color: rgba(255,255,255,0.5);
+	margin: 0;
+}
+
+.contactSection div{ 
+	margin: 10px;
+}
+.contactSection div p:first-of-type{
+	color: rgba(255,255,255,0.3);
+	margin: 0;
+
+}
+

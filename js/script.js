@@ -1,8 +1,8 @@
 $(document).ready(function(){
-	if (screen.width < 700) {
-		console.log("mobile device detected!");
-		document.location = "mobile.html";
-	}
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
+    // Take the user to a different screen here.
+        document.location = "mobile.html";
+    }
 	if (jQuery) {  
     	console.log("jQuery Exists");
     }
