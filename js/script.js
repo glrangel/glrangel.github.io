@@ -1,4 +1,8 @@
 $(document).ready(function(){
+	if (screen.width < 700) {
+		console.log("mobile device detected!");
+		document.location = "mobile.html";
+	}
 	if (jQuery) {  
     	console.log("jQuery Exists");
     }
@@ -15,16 +19,18 @@ $(document).ready(function(){
 	});
 
 
+/*
     $(window).scroll( function(){
            $('.hide').each( function(i){
             var objectBottom = $(this).offset().top + $(this).outerHeight() / 2;
             var windowBottom = $(window).scrollTop() + $(window).height();
-            /* Object must be completely visible */
+            /* Object must be completely visible 
             if( windowBottom > objectBottom ){
                 $(this).animate({'opacity':'1'},1500);
             } 
         }); 
     });
+*/
 
 
 });
