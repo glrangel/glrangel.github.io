@@ -15,11 +15,3 @@ $(document).ready(function(){
 	});
 
 });
-
-//function fade(){
-//	console.log("woop");
-//	$("#loading").fadeOut(1000);
-//	$('body').css('overflow','scroll');
-//	console.log($("#title").hasClass("load"));
-//}
-
