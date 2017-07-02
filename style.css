@@ -298,7 +298,8 @@ header{
   font-weight:bold;
   cursor:pointer;
   outline:none;
-  z-index:1000;
+  z-index:100000000000000;
+
 }
 .hamburger:focus{
 	outline: 0;
