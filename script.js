@@ -1,9 +1,12 @@
 $(document).ready( function() {
+    var screenOffset = 100;
     $( ".cross" ).hide();
     $( ".menu" ).hide();
 
-    if($(window).width() <= 750)
+    if($(window).width() <= 750){
         $( ".hamburger" ).show();
+        screenOffset = 500;
+    }
     else
         $( ".hamburger" ).hide();
 
@@ -11,7 +14,7 @@ $(document).ready( function() {
     var topOfOthDiv = $("#about").offset().top;
 
     $('#content').scroll(function() {
-        if($('#content').scrollTop() >= (topOfOthDiv - 100) ) { //scrolled past the other div?
+        if($('#content').scrollTop() >= (topOfOthDiv - screenOffset) ) { //scrolled past the other div?
             if($(window).width() <= 750){ //ismobile
                 console.log("WOOOP it small");
                 $('.content-body').css({"transform":"translateX(0%)"});
@@ -79,11 +82,3 @@ function scrollToID(tag){
 
     $('#content').animate({scrollTop: scrollAmount+padding},1000);
 }
-
-// function test(){
-//     $('.content-body').each(function(){
-//         $(this).delay(delay).animate({transform:"translateX(27%)"},1000); 
-//         delay+=1000;
-//     });
-// }
-
