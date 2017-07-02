@@ -9,7 +9,6 @@ html,body{
 	opacity: 0;
 }
 body{
-	overflow: hidden;
 	z-index: -1;
 }
 .show-hide-anim{
@@ -107,7 +106,6 @@ body{
 	padding-bottom: 10px;
 	z-index: 100;
 	background-color: #74838d;  /*rgba(0,0,0,0.4);*/
-	/*overflow: hidden;*/
 }
 #contact{
 	padding-bottom: 50px;

@@ -10,7 +10,6 @@ $(document).ready( function() {
     else
         $( ".hamburger" ).hide();
 
-    var delay = 1000;
     var topOfOthDiv = $("#about").offset().top;
 
     $('#content').scroll(function() {
