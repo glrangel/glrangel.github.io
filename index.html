@@ -1,120 +1,158 @@
 <!DOCTYPE html>
-<html >
+<html>
 	<head>
 		<title>Gabriel Rangel's Portfolio</title>
-		<link rel="icon" href="http://vignette3.wikia.nocookie.net/entertainment1/images/8/8a/Lotr-icon.png/revision/latest?cb=20110925213010">
-		<link rel="stylesheet" type="text/css" href="css/style.css">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-		<script src="js/script.js"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script src="script.js"></script>
 		<script>
 			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 			})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
 			ga('create', 'UA-88460733-1', 'auto');
 			ga('send', 'pageview');
 		</script>
 	</head>
-	<body onload="fade()">
-		<div class="navbar">
-			<ul class="list">
-				<li><a href="#about">About</a></li>
-				<li><a href="#projects">Projects</a></li>				
-				<li><a href="#contact">Contact</a></li>
-				<li><a href="images/resume.pdf" target="_blank">Resume</a></li>
-			</ul>
-				<a href="#title"></a>
-		</div>
-		<div class="header">
-			<div id="title" >Gabriel Rangel</div>
-			<div id="subtitle">
-				Web Developer and Music Producer<br>
-				<tag style="font-size: 15px">The site is currently under development<br><tag>
+	<body >
+		<button class="hamburger">&#9776;</button>
+		<button class="cross">&#735;</button>
+		<div class="menu">
+		  <ul>
+		    <a onclick="scrollToID('#about')"><li>About</li></a>
+		    <a onclick="scrollToID('#experience')"><li>Work Experience</li></a>
 
+		    <a onclick="scrollToID('#projects')"><li>Projects</li></a>
+		    <a onclick="scrollToID('#contact')"><li>Contact</li></a>
+		    <a href="images/PublicResumeFinal.pdf" target="_blank"><li>Résumé</li></a>
+		  </ul>
+		</div> 
+
+		<div id="navbar" class="show-hide-anim">
+			<div id="name">
+				<p>Gabriel Rangel</p>
 			</div>
-		</div>
-		<div class="aboutSection">
-			<p class="hide" id="about">About</p>
-			<div class="hide" id="text">Hello! My name is Gabriel Rangel. I am a computer science
-			major student at the University Of California, San Diego. Web 
-			Development is one of my favorite areas of computer science, along
-			with video game development. Check out my Project section for a few of my most recent projects.
-			I am also passionate about music. I 
-			love to produce video game music and LoFi hip-hop. I am 
-			currently looking for full time work or internships. Please feel 
-			free to contact me with any questions.
+			<div id="description">
+				<p>Front End Developer and music producer.</p>
 			</div>
-			<div class="hide" id="aboutMeLinks">
-				<div id="soundcloud">
-					<iframe width="100%" height="150" scrolling="yes" frameborder="yes" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/213130501&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=false">
-					</iframe>
-					<p>Checkout my soundcloud</p>
-				</div>
-				<div>
-					<a style="text-decoration:none" href="https://github.com/glrangel/" target="_blank">
-						<img src="images/github.png"></img>
-					</a>
-					<p>Click above for my GitHub page!</p>
+			<div id="links_container">
+				<div class="links">
+					<a onclick="scrollToID('#about')">About</a>
+				</div>				
+				<div class="links">
+					<a onclick="scrollToID('#experience')">Work Experience</a>
+				</div>				
+				<div class="links">
+					<a onclick="scrollToID('#projects')">Projects</a>
+				</div>				
+				<div class="links">
+					<a onclick="scrollToID('#contact')">Contact</a>
+				</div>				
+				<div class="links">
+					<a href="images/PublicResumeFinal.pdf" target="_blank">Résumé</a>
 				</div>
 			</div>
 		</div>
-		<div class="projectSection">
-			<p class="hide" id="projects">Projects</p>
-
-			<div class="projTable hide">
-			<div id = "bus" class="projElem">
-                <p> NextBusPlease</p>
-				<p id="projElemSubtitle"><br>Location based bus arrival time Pebble smartwatch application</p>
-				<p class="dependencies"> JavaScript and Pebble.js </p>
+		<div id="content" class="show-hide-anim">
+			<div id="landing" onclick="scrollToID('#about')" >
+				<p id="my-name">Gabriel Rangel</p>
+				<p id="my-name-subtitle">Front end web developer and music producer.</p>
 			</div>
-			<a href="https://htmlpreview.github.io/?https://github.com/glrangel/sketchpad/blob/master/index.html" target="_blank" >
-				<div class="projElem">
-                    <p> RetroSketch </p>
-					<p id="projElemSubtitle"><br>Small web application that emulates a sketchpad</p>
-					<p class="dependencies"> HTML/CSS/JavaScript and jQuery</p>
-				</div>
-			</a>
-			<a href="https://play.google.com/store/apps/details?id=com.magic.theshire.mycounter&hl=en" target="_blank">
-				<div id="mtg" class="projElem">
-                    <p>Basic Life<br>Counter</p>
-					<p id="projElemSubtitle">Magic the Gathering life counter android app</p>
-					<p class="dependencies"> Android Studio</p>
-
-				</div>
-			</a>
-				<div class="projElem">
-                    <p>Rent It<br>Android App</p>
-					<p id="projElemSubtitle">eBay/Craigslist type app where the user can borrow or buy items</p>
-					<p class="dependencies"> Android Studio</p>
-
-				</div>
-                <a href="https://cse-134b-b2127.firebaseapp.com/assignment2/public/hw2/team.html" target="_blank">
-			 		<div class="projElem">
-                        <p>Educational President Web Application (Under Development)</p>
-                        <p id="projElemSubtitle">Check out my teampage!</span></p>
-						<p class="dependencies"> HTML/CSS/JavaScript</p>
+			<div id="section-container">
+				<div id="about">
+					<div class="content-body show-hide-anim">
+						<h1>About</h1>
+						<p id="about-paragraph">Hello! My name is Gabriel Rangel. I am a recent computer science graduate from the University Of California, San Diego. I am a front end web developer and music producer. Check out my project section for a few of my most recent projects. If I'm not coding you can find me producing video game music and LoFi hip-hop. I am currently looking for full time work, internships, or freelance work on upwork. Please feel free to contact me with any questions.</p>
+						<div id="aboutMeLinks">
+							<div id="soundcloud">
+								<iframe width="100%" height="150" scrolling="yes" frameborder="yes" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/213130501&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=false">
+								</iframe>
+							</div>
+						</div>
 					</div>
-				</a>
-				<a href="#title">
-			 		<div class="projElem">
-                        <p>Beautiful<br>Personal Website</p>
-						<p id="projElemSubtitle">Slick personal website that you're using right now</p>
-						<p class="dependencies"> HTML/CSS/JavaScript and jQuery</p>
+				</div>
+				<div id="experience">
+					<div class="content-body show-hide-anim">
+						<h1>Work Experience</h1>
+						<p> Blue Sky Network, San Diego, CA — Web and Mobile App Development Intern </p>
+						<p> Upwork Freelance Web Developer </p>
+						<h4>check out my résumé for more details!</h4>
 					</div>
-				</a>
-			</div>
-		</div>
-		<div class="contactSection">
+				</div>
+
+				<div id="projects">
+					<div class="content-body show-hide-anim">
+						<h1>Projects</h1>
+
+						<div id="project-container">
+							<a id="proj-item-1" class="project-item" target="_blank" 
+								href="https://cse-134b-b2127.firebaseapp.com/assignment5/framework/hw5/wireframes/signup.html">
+								<div class="project-item-overlay anim-start-left">
+									<div class="overlay-text">Presidents App</div>
+									<p class="proj-subtitle">CRUD Application to teach people about U.S. Presidents 
+										<br><br><span>HTML, CSS, Javascript with Firebase</span>
+									</p>
+								</div>
+							</a>
+							<a id="proj-item-2" class="project-item" target="_blank" >
+								<div class="project-item-overlay anim-start-top">
+									<div class="overlay-text">NextStopPlease</div>
+									<p class="proj-subtitle">Pebble smartwatch app that determines closest bus stop to the user and 	lists scheduled arrival times for each route at that stop.
+										<br><br><span>Pebble.js, OneBusAway API</span>
+									</p>
+								</div>
+							</a>	
+							<a id="proj-item-3" class="project-item" target="_blank" >
+								<div class="project-item-overlay anim-start-right" onclick="scrollToID('#landing')">
+									<div class="overlay-text">Personal website</div>
+									<p class="proj-subtitle">Beautiful personal website that you're using right now!
+										<br><br><span>HTML/CSS/Javascript and jQuery</span>
+									</p>
+								</div>
+							</a>	
+
+							<a id="proj-item-4" class="project-item" target="_blank" href="https://tbd-team2.herokuapp.com/" >
+								<div class="project-item-overlay anim-start-left">
+									<div class="overlay-text">Appointment “secretary” web app</div>
+									<p class="proj-subtitle">A smart web secretary that schedules appointments through the app, SMS messages, and facebook messenger.
+										<br><br><span>Vue.js, Node + Express, NightwatchJS + Selenium</span>
+									</p>
+								</div>
+							</a>
+							<a id="proj-item-5" class="project-item" target="_blank" href="http://www.myearthlab.com" >
+								<div class="project-item-overlay anim-start-bottom">
+									<div class="overlay-text">EarthLab Online</div>
+									<p class="proj-subtitle">Educational web app that teaches children the importance of energy conservation.
+									<br><br><span>HTML/CSS/Javascript, Chart.js, Firebase</span>
+									</p>
+								</div>
+							</a>	
+							<a id="proj-item-6" class="project-item" target="_blank" href="https://play.google.com/store/apps/details?id=com.magic.theshire.mycounter&hl=en" >
+								<div class="project-item-overlay anim-start-right">
+									<div class="overlay-text">Basic Life Counter</div>
+									<p class="proj-subtitle">Magic the Gathering life counter with simulated die rolling.
+										<br><br> <span>Android Studio</span>
+									</p>
+								</div>
+							</a>							
+						</div>
+					</div>
+				</div>
 				<div id="contact">
-					<p>Email</p>
-					<p>glrangel25@gmail.com</p>
-				</div>	
-<!--
-				<div id="bitcoin">
-					<p>pic</p>
-				</div>	
--->	
+					<div class="content-body show-hide-anim">
+						<h1>Contact</h1>
+						<p>glrangel25@gmail.com</p>
+						<a href="https://github.com/glrangel/" target="_blank">
+							<img id="github-img" src="images/github.png">
+						</a>
+						<a href="https://www.upwork.com/o/profiles/users/_~0157a5219e2a5d7707/" target="_blank">
+							<img id="upwork-img" src="images/upwork.png">
+						</a>
+					</div>
+				</div>
+			</div>
 		</div>
+		<div id="footer"></div>
 	</body>
 </html>
