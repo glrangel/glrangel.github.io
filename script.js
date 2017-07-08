@@ -18,6 +18,7 @@ $(document).ready( function() {
                 console.log("WOOOP it small");
                 $('.content-body').css({"transform":"translateX(0%)"});
                 $('.content-body').css({"width":"auto"});
+
             }
             else //isdesktop
             {
@@ -30,6 +31,7 @@ $(document).ready( function() {
         else{
             $('#navbar').css({"transform":"translateX(-101%)"});
             $('.content-body').css({"transform":"translateX(-110%)"});
+
 		}
     });
 
@@ -51,8 +53,10 @@ $(document).ready( function() {
 });
 
 $(window).resize(function() {
-    if($(window).width() <= 750)
+    if($(window).width() <= 750){
         $( ".hamburger" ).show();
+        $('#navbar').css({"transform":"translateX(-101%)"});
+    }
     else
         $( ".hamburger" ).hide();
 });
