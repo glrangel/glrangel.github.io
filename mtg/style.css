@@ -95,6 +95,7 @@ input,input:focus{
 	font-size: 30px;
 	font-family: Breathe-Fire;
 	width:100%;
+	border:none;
 }
 button{
 	text-align: center;
