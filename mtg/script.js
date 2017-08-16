@@ -1,4 +1,3 @@
-window.onload=function(){ setTimeout(function(){ window.scrollTo(0, 1); }, 0); }
 
 var numOfPlayers = 2;
 
