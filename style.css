@@ -32,7 +32,7 @@ canvas{
 }
 #name {
 	color: #FFCC66;
-	font-size: 20px;
+	font-size: 30px;
 }
 #prof-pic img{
 	width: 100%;
@@ -45,9 +45,19 @@ canvas{
 	cursor: crosshair;
 	text-decoration: none;
 }
-#links_container a:hover{
+.project-link{
+	text-decoration: none;
+	color: inherit;
+}
+#links_container a:hover,.project-link:hover{
 	cursor: crosshair;
 	color:#bbb;
+}
+.subtitle{
+	/*color:rgba(255, 230, 181,0.7);*/
+	color:#7F7D7D;
+	/*color:#FFE6B5;*/
+
 }
 #navbar{
 	line-height: 20px;
@@ -112,10 +122,20 @@ canvas{
 	/*border: 2px solid white;*/
 	/*position: fixed;*/
 }
-#contact{
-/*	justify-content: center;
-	align-items: center;*/
-	/*text-align: center;*/
+#prof-pic{
+	transform: rotate(90deg);
+}
+/*#contact{
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}*/
+#center{
+	text-align: center;
+
+}
+#upwork-img:hover, #github-img:hover, #soundcloud > iframe > *:hover{
+		cursor: crosshair;
 }
 #upwork-img{
 	width:15%;

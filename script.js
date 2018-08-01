@@ -1,4 +1,5 @@
 $(document).ready( function() {
+
     var screenOffset = 100;
     $( ".cross" ).hide();
     $( ".menu" ).hide();
