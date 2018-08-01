@@ -1,272 +1,128 @@
+body{
+		/*justify-content: center;*/
+	/*align-items: center;*/
+		display: flex;
+		align-items: stretch;
+}
 html,body{
 	width: 100%;
-	height: 100%;
+	/*height: 100%;*/
 	padding: 0;
 	margin: 0;
-	font-family: monospace;
-}
+	font-family:monospace;
+	background: rgba(0,0,0,0);
 
-
-.hide{
-	opacity: 0;
+	/*color:#FFCC66; headers*/
+	/*color:#999; body*/
 }
-body{
+canvas{
+	/*border: 2px solid white;*/
+	height: 100%;
+	width: 100%;
+	position: fixed;
 	z-index: -1;
-}
-.show-hide-anim{
-	transition: all 0.7s ease-in-out;  
+	background-color: #1a1a1a;
 
+}
+.dashed-line{
+	height: 0; border: 0.5px dashed !important; background-color: #999; width: 100%; float: left;
+}
+.dashed-line-margin{
+	height: 0; border: 0.5px dashed !important; background-color: #999; width: 100%; float: left; margin-top:20px;
+}
+#name {
+	color: #FFCC66;
+	font-size: 20px;
+}
+#prof-pic img{
+	width: 100%;
+}
+#links_container *{
+	color: #999;
+	line-height: 25px;
+}
+#links_container a{
+	cursor: crosshair;
+	text-decoration: none;
+}
+#links_container a:hover{
+	cursor: crosshair;
+	color:#bbb;
 }
 #navbar{
-	transform: translateX(-101%); /*101 to hide shadow*/
-	text-align: center;
-	width: 23%;
-	min-width: 150px;
-	height: 100%;
-	box-shadow: 3px 0px 1px 1px rgba(0,0,0,0.2);
-	z-index: 2;
-	position: fixed;
-	background-color: #EEEEEE;
-}
-#name{
-	height: 15%;
-  	font-size: 2.5em;
-  	min-height: 100px;
-}
-#name>p{
-  	background-color: #EEEEEE;
-	min-width: 150px;
-}
-#description{
-	height: 15%;
-	min-width: 150px;
-
-}
-#links_container{
-	height: 70%;
-	text-align: center;	
-}
-.links,#name{
-	color:black;
-}
-.links a{
-	text-decoration: none;
-	color: black;
-	margin-top: 20px;
-
-}
-.links a:hover{
-	text-decoration: underline;
-	cursor: crosshair;
-}
-.links>a,#name>p,#description>p{
-	display: inline-block;
-	text-align: left;
-	width: 80%;
-	min-width: 150px;
-
-}
-#landing img{
-	width:100%;
-	height: 100%;
-}
-#landing{
-		overflow-x: hidden;
-
+	line-height: 20px;
+	margin: 10px;
+	width: 25%;
+	flex-grow: 1;
 	display: flex;
-	justify-content: center;
 	flex-direction: column;
-	align-items: center;
-	background-size: cover;
-	  box-shadow: inset 0 0 0 2000px rgba(0,0,0,0.3);
-
-
-	/*flex-wrap: wrap;*/
-	/*z-index: 100;*/
+	/*border:3px white solid;*/
 }
-#content{
-	height: 100%;
-	width: 100%;
-    overflow-y: scroll;
-    -webkit-overflow-scrolling: touch;
-    background: url(images/mountain-min-md.jpg);
-	background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    box-shadow: inset 0 0 1000px 1000px rgba(0,0,0,0.2);
-}
-#content>div{
-	width: 100%;
-	/*min-height: 100%;*/
-	height: 100%;
+#navbar-fixed{
+	height:100%;
+	position: fixed;
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	width:25%;
+	justify-content: center;
 }
 #section-container{
-		background-color: #74838d;  /*rgba(0,0,0,0.4);*/
+	width:75%;
+	display: flex;
+	flex-direction: column;
+	/*border:3px solid white;*/
+	flex-grow: 1;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	/*height:100%;*/
+	/*word-wrap: break-word*/
 }
-#about,#projects,#contact,#experience{
-	padding-top: 40px;
-	padding-bottom: 10px;
-	z-index: 100;
-	background-color: #74838d;  /*rgba(0,0,0,0.4);*/
+
+.content-body h2{
+	color:#FFCC66;
+	font-weight: lighter;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.content-body p{
+	color:#999;
+}
+.space{
+	flex-grow: 1;
+	width:10%;
+}
+#about-paragraph{
+	line-height: 20px;
+}
+#soundcloud{
+		width:100%;
+}
+#soundcloud iframe{
+	/*height: 100px;*/
+	width:100%;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+#soundcloud-container,#prof-pic-container{
+	display: flex;
+	flex-grow: 1;
+	justify-content: center;
+	align-items: center;
+	/*border: 2px solid white;*/
+	/*position: fixed;*/
 }
 #contact{
-	padding-bottom: 50px;
-	text-align: center;
-}
-#contact a{
-	padding: 0 15px 0 15px;
-	text-decoration: none;
-
-}
-h1{
-	font-size: 40px;
-	font-weight: normal;
-}
-.content-body{
-	border-radius: 1px;
-	margin-left: 5%;
-	margin-right: 5%;
-	height: 100%;
-	font-size: 15px;
-	width: 69%;
-	transform: translateX(-110%);
-    transition-delay: 0.2s;
-
-	/* top right bottom left */
-	padding: 2px 20px 30px 20px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    background-color: #EEEEEE;
-
-}
-#aboutMeLinks{
-	text-align: center;
-}
-#github-img{
-	width:8%;
+/*	justify-content: center;
+	align-items: center;*/
+	/*text-align: center;*/
 }
 #upwork-img{
-	width: 16%;
+	width:15%;
 }
-@media screen and (max-width: 750px){
-	#github-img{
-		width:12%;
-	}
-	#upwork-img{
-		width: 30%;
-	}
+#github-img{
+		text-decoration: none;
 }
-#my-name,#my-name-subtitle{
-	font-size: 80px;
-	color: #EEEEEE;
-	z-index: 50;
-	font-family: Courier New;
-	text-align: center;
-}
-#my-name-subtitle{
-	font-size: 30px;
-	margin-top:-5%;
-}
-#project-container{
-	margin-top:-2%;
-	display: flex;
-	justify-content: center;
-	flex-wrap: wrap;
-
-}
-.project-item-overlay{
-	background-color:rgba(0,0,0,0.5);
-	width:100%;
-	height:100%;
-	transition: 1s ease;
-	border-radius: 3px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-}
-@media screen and (min-width: 750px){
-
-	.anim-start-left{transform: translate(-100%);}
-	.anim-start-top{transform: translateY(-100%);}
-	.anim-start-right{transform: translateX(100%);}
-	.anim-start-bottom{transform: translateY(100%);}
-}
-
-.overlay-text{
-	font-size: 20px;
-	background-color: rgba(116,131,141,0.4);
-	padding: 5px;
-
-}
-.project-item{
-	color:#EEEEEE;
-	margin: 15px;
-	box-shadow: 0 4px 8px 2px rgba(0, 0, 0, 0.2);
-	transition: 0.8s;
-	border-radius: 3px;
-	display: flex;
-	justify-content:center;
-	align-items: center;
-	overflow: hidden;
-	text-decoration: none;
-
-
-}
-@media screen and (max-width: 750px){
-	.project-item{
-		width: 400px;
-	    height: 250px;
-	}
-
-}
-@media screen and (min-width: 751px){
-	.project-item{
-		width: 250px;
-	    height: 250px;
-	}
-	#mtg-app{
-		display: none;
-	}
-}
-.project-item:hover > .project-item-overlay{
-	transform: translateX(0%);
-	cursor: pointer;
-}
-.project-item-overlay:hover{
-	/*opacity:1;*/
-
-}
-#proj-item-1{
-	background: url(images/mount-rushmore.jpg) no-repeat center center;
-    background-size: cover;
-}
-#proj-item-2{
-	background: url(images/bus.jpg) no-repeat center center;
-    background-size: cover;
-}
-#proj-item-3{
-	background: url(images/mountain-min-md.jpg) no-repeat center center;
-    background-size: cover;
-}
-#proj-item-4{
-	background: url(images/appointment.jpg) no-repeat center center;
-    background-size: cover;
-}
-#proj-item-5{
-	background: url(images/earthlab_classroom.jpg) no-repeat center center;
-    background-size: cover;
-}
-#proj-item-6{
-	background: url(images/die.jpg) no-repeat center center;
-    background-size: cover;
-}
-.proj-subtitle{
-	text-align: center;
-}
-.proj-subtitle span {
-	font-style: italic;
-}
-
 /* MOBILE HAMBURGER MENU */
 .hamburger,.cross,.menu{
 	display: none;
@@ -332,7 +188,6 @@ header{
 header{display:inline-block; font-size:12px;}
 span{padding-left:20px;}
 a{color:#336699;}
-
 
 
 
