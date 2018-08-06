@@ -32,7 +32,7 @@ canvas{
 }
 #name {
 	color: #FFCC66;
-	font-size: 30px;
+	font-size: 1.6em;
 }
 #prof-pic img{
 	width: 100%;
@@ -122,6 +122,9 @@ canvas{
 	/*border: 2px solid white;*/
 	/*position: fixed;*/
 }
+#prof-pic-container{
+	overflow:hidden;
+}
 #prof-pic{
 	transform: rotate(90deg);
 }
@@ -143,6 +146,8 @@ canvas{
 #github-img{
 		text-decoration: none;
 }
+
+
 /* MOBILE HAMBURGER MENU */
 .hamburger,.cross,.menu{
 	display: none;

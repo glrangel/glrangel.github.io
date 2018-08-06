@@ -72,18 +72,7 @@ function scrollToID(tag){
         });
     }
 
-    var scrollAmount = 0;
-    var dest = $(tag).offset().top;
-    var currLoc = $('#section-container').scrollTop();
-    console.log(currLoc);
-    // console.log($('body').scrollTop();
-    var padding = 0;
+    var dest = $(tag).offset().top-37;
+    $('html').animate({scrollTop: dest},1000);
 
-    if(dest > currLoc)
-        scrollAmount = dest + currLoc;
-    if(dest < currLoc)
-        scrollAmount = currLoc + dest;
-
-
-    $('#section-container').animate({scrollTop: scrollAmount+padding},1000);
 }
