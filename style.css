@@ -197,7 +197,8 @@ canvas{
 	color:white;
 	font-size: 2em;
 	outline: none;
-	border:none;
+	/*border:none;*/
+	text-decoration: none;
 }
 
 
