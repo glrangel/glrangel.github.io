@@ -3,6 +3,7 @@
 	<head>
 		<title>Gabriel Rangel's Portfolio</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/1.0.1/slideout.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="style.css">
 		<script src="script.js"></script>
 		<meta name="theme-color" content="#1c2533" />
@@ -19,112 +20,256 @@
 	<body>
 		<canvas></canvas>
 		<script src="canvas.js"></script>
+		<!-- Mobile -->
+		<div class="mobile">
+			<nav id="menu">
 
-		<button class="hamburger">&#9776;</button>
-		<button class="cross">&#735;</button>
-		<div class="menu">
-		  <ul>
-		    <a onclick="scrollToID('#about')"><li>About</li></a>
-		    <a onclick="scrollToID('#experience')"><li>Work Experience</li></a>
-		    <a onclick="scrollToID('#projects')"><li>Projects</li></a>
-		    <a onclick="scrollToID('#contact')"><li>Contact</li></a>
-		    <a href="images/PublicResumeFinal.pdf" target="_blank"><li>Résumé</li></a>
-		  </ul>
-		</div> 
-		<div id="navbar">
-			<div id="navbar-fixed">
-				<hr class="dashed-line-margin">
-				<div id="name">
-					<p>Gabriel Rangel</p>
-				</div>
-				<div id="description">
-					<!-- <p>Front End Developer and music producer.</p> -->
-				</div>
-				<div id="links_container">
-					<div class="links">
-						<a onclick="scrollToID('#about')">About</a>
-					</div>				
-					<div class="links">
-						<a onclick="scrollToID('#experience')">Work Experience</a>
-					</div>				
-					<div class="links">
-						<a onclick="scrollToID('#projects')">Projects</a>
-					</div>				
-					<div class="links">
-						<a onclick="scrollToID('#contact')">Contact</a>
-					</div>				
-					<div class="links">
-						<a href="images/PublicResumeFinal.pdf" target="_blank">Résumé</a>
+				<div id="navbar">
+					<div id="navbar-fixed">
+						<hr class="dashed-line-margin">
+						<div id="name">
+							<p>Gabriel Rangel</p>
+						</div>
+						<div id="links_container">
+							<div class="links">
+								<a onclick="scrollToID('#about')">About</a>
+							</div>				
+							<div class="links">
+								<a onclick="scrollToID('#experience')">Work Experience</a>
+							</div>				
+							<div class="links">
+								<a onclick="scrollToID('#projects')">Projects</a>
+							</div>				
+							<div class="links">
+								<a onclick="scrollToID('#contact')">Contact</a>
+							</div>				
+							<div class="links">
+								<a href="images/PublicResumeFinal.pdf" target="_blank">Résumé</a>
+							</div>
+						</div>
+						<hr class="dashed-line-margin">
+						<div id="prof-pic-container">
+							<div id="prof-pic">
+								<img src="images/gabe-image.jpg">
+							</div>
+						</div>	
 					</div>
 				</div>
-				<hr class="dashed-line-margin">
-				<div id="prof-pic-container">
-					<div id="prof-pic">
-						<img src="images/gabe-image.jpg">
+			  <!-- <h2>Menu</h2> -->
+			</nav>
+			  <header class="mobile fixed-header">
+			    <button class="toggle-button">☰</button>
+			  </header>
+			<main id="panel">
+						<canvas></canvas>
+		<script src="canvas.js"></script>
+			  <div class="space"></div>
+				<div id="section-container">
+					<div id="about">
+						<hr class="dashed-line-margin">
+						<div class="content-body">
+							<h2>About</h2>
+							<p id="about-paragraph">Hello! My name is Gabriel Rangel. I am a recent computer science graduate from the University Of California, San Diego. I am a front end web developer and music producer. Check out my project section for a few of my most recent projects. If I'm not coding you can find me producing video game music and LoFi hip-hop. I am currently looking for full time work and freelance work on upwork. Please feel free to contact me with any questions.</p>
+						</div>
 					</div>
-				</div>	
-			</div>
+					<hr class="dashed-line-margin">
+					<div id="experience">
+						<div class="content-body">
+							<h2>Work Experience</h2>
+							<p> <a class="subtitle">2017 - Present:</a> Blue Sky Network, San Diego, CA — Software Engineer Consultant</p>
+							<p> <a class="subtitle">2016 - Present:</a> Upwork Freelance Web Developer </p>
+							<p> <a class="subtitle">2018 - Present:</a> Aira, San Diego, CA  — Sound Designer</p>
+							<p> <a class="subtitle">2016 - 2017:</a> Blue Sky Network, San Diego, CA — Web and Mobile App Development Intern </p>
+							<p>Check out my résumé for more details!</p>
+						</div>
+					</div>
+					<hr class="dashed-line-margin">
+					<div id="projects">
+						<div class="content-body">
+							<h2>Projects</h2>
+							<p> <a class="subtitle">SkyRouter — Javascript (Ember.js), HTML/CSS, SQL:</a> Map overlays involving 3rd party data sources for fleet tracking portal SkyRouter (Volcano, AIS Ship tracking).</p>
+							<p> <a class="subtitle">Blue Sky Network Support Site — Wordpress:</a> Created support site for blue sky network.</p>
+							<p> <a class="subtitle">Personal Website — HTML/CSS/Javascript, jQuery:</a> <a class="project-link" href="https://www.gabriel-rangel.com" target="_blank">www.gabriel-rangel.com</a></p>
+							<p> <a class="subtitle">Harper's Adventure Soundtrack — Ableton Live:</a> <a class="project-link" href="https://jallexmonster.itch.io/harpers-adventure" target="_blank">jallexmonster.itch.io/harpers-adventure</a></p>
+						</div>
+					</div>
+
+					<hr class="dashed-line-margin">
+					<div id="contact">
+						<div class="content-body">
+							<h2>Contact</h2>
+							<div id="center">
+								<p href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=glrangel25@gmail.com&tf=1" style="font-size:1.2em;">glrangel25@gmail.com</p>
+								<a href="https://github.com/glrangel/" target="_blank" style="text-decoration: none;">
+									<img id="github-img" src="images/GitHub-Mark-Light-64px.png">
+								</a>
+								<a href="https://www.upwork.com/o/profiles/users/_~0157a5219e2a5d7707/" target="_blank">
+									<img id="upwork-img" src="images/upwork.png">
+								</a>
+							</div>
+					</div>
+					</div>
+					<hr class="dashed-line-margin">
+					<div id="soundcloud-container">
+						<div id="soundcloud">
+							<iframe id="iframe" width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/420985230&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+						</div>
+					</div>
+
+				</div>
+				<div class="space"></div>
+
+				<div id="footer"></div>
+			</main>
 		</div>
-
-		<div class="space"></div>
-
-		<div id="section-container">
-			<div id="about">
-				<hr class="dashed-line-margin">
-				<div class="content-body">
-					<h2>About</h2>
-					<p id="about-paragraph">Hello! My name is Gabriel Rangel. I am a recent computer science graduate from the University Of California, San Diego. I am a front end web developer and music producer. Check out my project section for a few of my most recent projects. If I'm not coding you can find me producing video game music and LoFi hip-hop. I am currently looking for full time work and freelance work on upwork. Please feel free to contact me with any questions.</p>
-				</div>
-			</div>
-			<hr class="dashed-line-margin">
-			<div id="experience">
-				<div class="content-body">
-					<h2>Work Experience</h2>
-					<p> <a class="subtitle">2017 - Present:</a> Blue Sky Network, San Diego, CA — Software Engineer Consultant</p>
-					<p> <a class="subtitle">2016 - Present:</a> Upwork Freelance Web Developer </p>
-					<p> <a class="subtitle">2018 - Present:</a> Aira, San Diego, CA  — Sound Designer</p>
-					<p> <a class="subtitle">2016 - 2017:</a> Blue Sky Network, San Diego, CA — Web and Mobile App Development Intern </p>
-					<p>Check out my résumé for more details!</p>
-				</div>
-			</div>
-			<hr class="dashed-line-margin">
-			<div id="projects">
-				<div class="content-body">
-					<h2>Projects</h2>
-					<p> <a class="subtitle">SkyRouter — Javascript (Ember.js), HTML/CSS, SQL:</a> Map overlays involving 3rd party data sources for fleet tracking portal SkyRouter (Volcano, AIS Ship tracking).</p>
-					<p> <a class="subtitle">Blue Sky Network Support Site — Wordpress:</a> Created support site for blue sky network.</p>
-					<p> <a class="subtitle">Personal Website — HTML/CSS/Javascript, jQuery:</a> <a class="project-link" href="https://www.gabriel-rangel.com" target="_blank">www.gabriel-rangel.com</a></p>
-					<p> <a class="subtitle">Harper's Adventure Soundtrack — Ableton Live:</a> <a class="project-link" href="https://jallexmonster.itch.io/harpers-adventure" target="_blank">jallexmonster.itch.io/harpers-adventure</a></p>
-				</div>
-			</div>
-
-			<hr class="dashed-line-margin">
-			<div id="contact">
-				<div class="content-body">
-					<h2>Contact</h2>
-					<div id="center">
-						<p href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=glrangel25@gmail.com&tf=1" style="font-size:1.2em;">glrangel25@gmail.com</p>
-						<a href="https://github.com/glrangel/" target="_blank" style="text-decoration: none;">
-							<img id="github-img" src="images/GitHub-Mark-Light-64px.png">
-						</a>
-						<a href="https://www.upwork.com/o/profiles/users/_~0157a5219e2a5d7707/" target="_blank">
-							<img id="upwork-img" src="images/upwork.png">
-						</a>
+		
+		<!-- Desktop -->
+		<div class="desktop">
+			<div id="navbar">
+				<div id="navbar-fixed">
+					<hr class="dashed-line-margin">
+					<div id="name">
+						<p>Gabriel Rangel</p>
 					</div>
-			</div>
-			</div>
-			<hr class="dashed-line-margin">
-			<div id="soundcloud-container">
-				<div id="soundcloud">
-					<iframe id="iframe" width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/420985230&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+					<div id="links_container">
+						<div class="links">
+							<a onclick="scrollToID('#about')">About</a>
+						</div>				
+						<div class="links">
+							<a onclick="scrollToID('#experience')">Work Experience</a>
+						</div>				
+						<div class="links">
+							<a onclick="scrollToID('#projects')">Projects</a>
+						</div>				
+						<div class="links">
+							<a onclick="scrollToID('#contact')">Contact</a>
+						</div>				
+						<div class="links">
+							<a href="images/PublicResumeFinal.pdf" target="_blank">Résumé</a>
+						</div>
+					</div>
+					<hr class="dashed-line-margin">
+					<div id="prof-pic-container">
+						<div id="prof-pic">
+							<img src="images/gabe-image.jpg">
+						</div>
+					</div>	
 				</div>
 			</div>
 
-		</div>
-		<div class="space"></div>
+			<div class="space"></div>
 
-		<div id="footer"></div>
+			<div id="section-container">
+				<div id="about">
+					<hr class="dashed-line-margin">
+					<div class="content-body">
+						<h2>About</h2>
+						<p id="about-paragraph">Hello! My name is Gabriel Rangel. I am a recent computer science graduate from the University Of California, San Diego. I am a front end web developer and music producer. Check out my project section for a few of my most recent projects. If I'm not coding you can find me producing video game music and LoFi hip-hop. I am currently looking for full time work and freelance work on upwork. Please feel free to contact me with any questions.</p>
+					</div>
+				</div>
+				<hr class="dashed-line-margin">
+				<div id="experience">
+					<div class="content-body">
+						<h2>Work Experience</h2>
+						<p> <a class="subtitle">2017 - Present:</a> Blue Sky Network, San Diego, CA — Software Engineer Consultant</p>
+						<p> <a class="subtitle">2016 - Present:</a> Upwork Freelance Web Developer </p>
+						<p> <a class="subtitle">2018 - Present:</a> Aira, San Diego, CA  — Sound Designer</p>
+						<p> <a class="subtitle">2016 - 2017:</a> Blue Sky Network, San Diego, CA — Web and Mobile App Development Intern </p>
+						<p>Check out my résumé for more details!</p>
+					</div>
+				</div>
+				<hr class="dashed-line-margin">
+				<div id="projects">
+					<div class="content-body">
+						<h2>Projects</h2>
+						<p> <a class="subtitle">SkyRouter — Javascript (Ember.js), HTML/CSS, SQL:</a> Map overlays involving 3rd party data sources for fleet tracking portal SkyRouter (Volcano, AIS Ship tracking).</p>
+						<p> <a class="subtitle">Blue Sky Network Support Site — Wordpress:</a> Created support site for blue sky network.</p>
+						<p> <a class="subtitle">Personal Website — HTML/CSS/Javascript, jQuery:</a> <a class="project-link" href="https://www.gabriel-rangel.com" target="_blank">www.gabriel-rangel.com</a></p>
+						<p> <a class="subtitle">Harper's Adventure Soundtrack — Ableton Live:</a> <a class="project-link" href="https://jallexmonster.itch.io/harpers-adventure" target="_blank">jallexmonster.itch.io/harpers-adventure</a></p>
+					</div>
+				</div>
+
+				<hr class="dashed-line-margin">
+				<div id="contact">
+					<div class="content-body">
+						<h2>Contact</h2>
+						<div id="center">
+							<p href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=glrangel25@gmail.com&tf=1" style="font-size:1.2em;">glrangel25@gmail.com</p>
+							<a href="https://github.com/glrangel/" target="_blank" style="text-decoration: none;">
+								<img id="github-img" src="images/GitHub-Mark-Light-64px.png">
+							</a>
+							<a href="https://www.upwork.com/o/profiles/users/_~0157a5219e2a5d7707/" target="_blank">
+								<img id="upwork-img" src="images/upwork.png">
+							</a>
+						</div>
+				</div>
+				</div>
+				<hr class="dashed-line-margin">
+				<div id="soundcloud-container">
+					<div id="soundcloud">
+						<iframe id="iframe" width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/420985230&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+					</div>
+				</div>
+
+			</div>
+			<div class="space"></div>
+
+			<div id="footer"></div>
+		</div>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script>
+		  var slideout = new Slideout({
+		    'panel': document.getElementById('panel'),
+		    'menu': document.getElementById('menu'),
+		    'padding': 256,
+		    'tolerance': 70
+		  });
+
+		  // Toggle button
+		  document.querySelector('.toggle-button').addEventListener('click', function() {
+		    slideout.toggle();
+		  });
+		  var fixed = document.querySelector('.fixed-header');
+
+		  slideout.on('translate', function(translated) {
+		    fixed.style.transform = 'translateX(' + translated + 'px)';
+		  });
+
+		  slideout.on('beforeopen', function () {
+		    fixed.style.transition = 'transform 300ms ease';
+		    fixed.style.transform = 'translateX(256px)';
+		  });
+
+		  slideout.on('beforeclose', function () {
+		    fixed.style.transition = 'transform 300ms ease';
+		    fixed.style.transform = 'translateX(0px)';
+		  });
+
+		  slideout.on('open', function () {
+		    fixed.style.transition = '';
+		  });
+
+		  slideout.on('close', function () {
+		    fixed.style.transition = '';
+		  });
+
+		  function close(eve) {
+		    eve.preventDefault();
+		    slideout.close();
+		  }
+
+		  slideout
+		    .on('beforeopen', function() {
+		      this.panel.classList.add('panel-open');
+		    })
+		    .on('open', function() {
+		      this.panel.addEventListener('click', close);
+		    })
+		    .on('beforeclose', function() {
+		      this.panel.classList.remove('panel-open');
+		      this.panel.removeEventListener('click', close);
+		    });
+		</script>
 
 	</body>
 </html>
