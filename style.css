@@ -199,6 +199,7 @@ canvas{
 	outline: none;
 	/*border:none;*/
 	text-decoration: none;
+	-webkit-appearance: none;
 }
 
 
