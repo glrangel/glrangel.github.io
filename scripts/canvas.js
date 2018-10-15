@@ -1,12 +1,7 @@
- console.log("hi");
-
 var canvas = document.querySelector('canvas');
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 var c = canvas.getContext('2d');
- console.log("hiya");
-
-
 var spriteArray = [];
 var dustArray = [];
 
@@ -16,7 +11,6 @@ for(var i = 0; i < 40; i++){
 
 
 function Sprite(x,y,dx,dy,radius,idx,dust,blurRate,blur){
-	console.log(blur);
 	this.x = x;
 	this.y = y;
 	this.dx = dx;
@@ -37,32 +31,18 @@ function Sprite(x,y,dx,dy,radius,idx,dust,blurRate,blur){
 			c.fillStyle = "#333";
 		if(this.blur >= 30 || this.blur < 5)
 			this.blurRate = -this.blurRate;
-		// if(this.blur < 5)
-		// 	console.log(this.blur);
+
 		this.blur += this.blurRate;
 		c.shadowBlur = this.blur;
-
-
-
-
 		c.shadowColor = "white";
 		c.fill();
 	}
-	// this.explode = function(x,y){
-	// 	for(var  i = 0; i < 3; i++){
-	// 		spriteArray.push(new Sprite(x,y-10,(Math.random()*2),-Math.abs((Math.random()*5)+1),Math.random()*10,spriteArray.length,1));
-	// 	}
-	// }
 	this.update = function(){
 		if(this.x > (canvas.width - this.radius) || this.x < 0){
 			this.dx = -this.dx;
 		}
 		if(this.y > (canvas.height - this.radius) || this.y < 0){
 			this.dy = -this.dy;
-		}
-		if(this.y > (canvas.height - this.radius)){
-			// if(this.dust == 0) 
-			// 	this.explode(this.x,this.y);
 		}
 		this.x += this.dx;
 		this.y += this.dy;
